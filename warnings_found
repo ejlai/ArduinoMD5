@@ -1,0 +1,20 @@
+
+I tried to test out this MD5 library with arduino ide 1.8.9. When I ran verify and compile, it works but I got the warnings elow:
+
+...\sketch_may02a_MD5_test.ino.ino: In function 'void setup()':
+
+....\sketch_may02a_MD5_test.ino\sketch_may02a_MD5_test.ino.ino:15:51: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+
+   unsigned char* hash=MD5::make_hash("hello world");
+
+                                                   ^
+
+C:\Program Files (x86)\Arduino\libraries\MD5\MD5.cpp: In static member function 'static void MD5::MD5Update(void*, const void*, size_t)':
+
+C:\Program Files (x86)\Arduino\libraries\MD5\MD5.cpp:207:21: warning: right shift count >= width of type [-Wshift-count-overflow]
+
+  ctx->hi += size >> 29;
+
+                     ^
+
+Can these be addressed? 
